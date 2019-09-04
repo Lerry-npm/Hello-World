@@ -5,13 +5,13 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'styles/reset.css'
-import 'styles/border.css'
+import 'styles/reset.css' // 统一移动端浏览器格式
+import 'styles/border.css' // 解决一像素问题
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
-fastClick.attach(document.body)
+fastClick.attach(document.body) // 移动端300ms响应
 Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
