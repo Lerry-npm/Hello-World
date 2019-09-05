@@ -2,11 +2,11 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
-          <p class="item-main">大连游泳馆</p>
-          <p class="item-second">畅游海洋，亲友团聚，共聚一堂</p>
+          <p class="item-main">{{item.title}}</p>
+          <p class="item-second">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
       </li>
@@ -17,19 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/vs_ceph_vs_tts/d2fd1bcb-1ce3-427e-a61c-7c0c41c2196a.jpg_r_390x260x90_733fb20e.jpg'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/vs_ceph_vs_tts/d2fd1bcb-1ce3-427e-a61c-7c0c41c2196a.jpg_r_390x260x90_733fb20e.jpg'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/vs_ceph_vs_tts/d2fd1bcb-1ce3-427e-a61c-7c0c41c2196a.jpg_r_390x260x90_733fb20e.jpg'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
